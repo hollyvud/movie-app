@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.menu{
+    border: rem(4) solid var(--black-12);
+    border-radius: rem(12);
+
+    @include laptop{
+        border: rem(3) solid var(--black-12);
+        border-radius: rem(10);
+    }
+
+    &__list{
+        display: flex;
+        column-gap: rem(30);
+
+        @include tablet{
+            column-gap: rem(16);
+        }
+
+        &-link{
+            @include fluid-text(18,14);
+
+            padding: rem(14) rem(24);
+            font-weight: 400;
+            
+
+            @include laptop{
+                padding: rem(12) rem(20);
+            }
+            &.is-active{
+                color: var(--absolute-white);
+                border: var(--border);
+                border-radius: rem(8);
+                font-weight: 500;
+                font-size: rem(18);
+                background-color: var(--black-10);
+            }
+        }
+    }
+
+
+}

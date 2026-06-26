@@ -30,7 +30,7 @@ function Navigation() {
                     </li>
                 </ul>
             </nav>
-            <div className="header__butons">
+            <div className="header__buttons">
                 <img width={34} src={SearchIcon} alt="" className="header__buttons-icon" />
                 <img width={34} src={NotificationIcon} alt="" className="header__buttons-icon" />
             </div>
