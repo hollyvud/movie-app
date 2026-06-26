@@ -1,0 +1,28 @@
+@use 'helpers' as *;
+
+:root{
+    --color-accent-black:#000;
+    --color-accent-6:#929292;
+
+    --color-silver:#e9e9e9;
+    --color-back:#fff;
+    --color-accent-2:#dfecc6;
+    --color-accent-3:#8e9c78;
+    --color-accent-4:#485c11;
+    --color-text-parag:#6F6F6F;
+
+    --font-family-base:'CrimsonText', sans-serif;
+    --font-family:'DMSans', sans-serif;
+    --font-family-section:'RobotoMono', sans-serif;
+
+    --photo-border-radius:#{rem(30)}; 
+
+    --transition-duration: 0.2s;
+
+    --container-width: #{rem(1200)};
+    --container-padding-x: #{rem(40)};
+
+    @include mobile{
+        --container-padding-x: #{rem(16)};
+    }
+}
