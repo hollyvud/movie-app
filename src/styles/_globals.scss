@@ -12,13 +12,18 @@ body{
     flex-direction: column;
 
     font-family: var(--font-family);
-    color: var(--color-text-parag);
-    background-color: var(--color-back);
+    color: var(--grey-60);
+    background-color: var(--black-08);
 }
 
-main{
-    flex-grow: 1;
-    padding-top: rem(72);
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+    color: var(--absolute-white);
 }
 
 h1, .h1,
@@ -27,31 +32,23 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6{
-    color: var(--color-accent-black);
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6{
-    font-family: var(--font-family-base);
-    font-weight: 400;
+    font-family: var(--font-family);
+    font-weight: 700;
 }
 
 h1, .h1{
-    @include fluid-text(160, 76);
-    line-height: 0.8;
+    @include fluid-text(58, 28);
+    line-height: 1.5;
 }
 
 h2, .h2{
-    @include fluid-text(60, 50);
-    line-height: 0.9;
+    @include fluid-text(38, 24);
+    line-height: 1.5;
 }
 
 h3, .h3{
-    @include fluid-text(40, 24);
+    @include fluid-text(24, 18);
+    line-height: 1.5;
 }
 
 h4, .h4{
@@ -78,10 +75,10 @@ svg * {
 
 
 a{
-    color: var(--color-accent-black);
+    color: var(--grey-60);
 
     @include hover{
-        color: var(--color-accent-6);
+        color: var(--grey-90);
     }
 
     &[class] {
@@ -90,7 +87,7 @@ a{
 }
 
 :focus-visible {
-    outline: rem(2) dashed var(--color-accent-4);
+    outline: rem(2) dashed var(--red-45);
     outline-offset: rem(4);
     transition-duration: 0s !important;
 }
