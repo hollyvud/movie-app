@@ -6,6 +6,11 @@ import Logo from '../image/Logo.svg'
 
 function Navigation() {
   
+    const [isActive, setIsActive] = useState(false);
+
+    function setActiveOverlay(){
+    setIsActive(!isActive)
+    }
 
   return (
     <header className='header'>
@@ -13,7 +18,7 @@ function Navigation() {
         <div className="header__logo">
             <img src={Logo} width={199} height={60} alt="" className="header__logo-image" />
         </div>
-        <div className="header__overlay" data-js-header-overlay>
+        <div className={isActive ? "header__overlay is-active" : "header__overlay"} data-js-header-overlay>
             <nav className="header__menu menu">
                 <ul className="menu__list">
                     <li className="menu__list-item">
@@ -35,6 +40,11 @@ function Navigation() {
                 <img width={34} src={NotificationIcon} alt="" className="header__buttons-icon" />
             </div>
         </div>
+        <button className={isActive ? "header__burger-buttton burger-button visible-mobile  is-active" : "header__burger-buttton burger-button visible-mobile"} data-js-header-burger-button type="button" onClick={setActiveOverlay}>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+        </button>
       </div>
     </header>
   )

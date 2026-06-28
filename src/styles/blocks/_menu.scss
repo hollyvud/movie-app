@@ -16,6 +16,10 @@
         @include tablet{
             column-gap: rem(16);
         }
+        @include mobile{
+            flex-direction: column;
+            row-gap: rem(20)
+        }
 
         &-link{
             @include fluid-text(18,14);

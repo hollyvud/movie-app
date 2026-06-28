@@ -5,6 +5,16 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+
+        padding: rem(30) 0 rem(30) 0;
+
+        @include laptop{
+            padding: rem(24) 0 rem(24) 0;
+        }
+        @include mobile{
+            padding: rem(60) 0 rem(14) 0;
+        }
         
     }
 
@@ -17,10 +27,11 @@
             position: fixed;
             inset: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: column-reverse;
+            justify-content: start;
             row-gap: 3rem;
             padding: 1rem;
+            margin-top: rem(134);
             background-color: var(--color-dark-10);
             transition-duration: var(--transition-duration);
 
@@ -40,6 +51,10 @@
         @include laptop {
             column-gap: rem(14);
         }
+    }
+
+    &__burger-button{
+
     }
 
 
